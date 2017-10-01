@@ -1,0 +1,143 @@
+@charset "UTF-8";
+body,main,ul,li,h1,p{
+    margin: 0;
+    padding: 0;
+}
+/*去除滚动条*/
+body::-webkit-scrollbar{display:none }
+ul{
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 64px;
+    background-color: cornflowerblue;
+    /*固定*/
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1000;
+
+    text-align: center;
+    line-height: 64px;
+    color: white;
+    font-size: 22px;
+    font-weight: lighter;
+}
+body{
+    background: rgb(247,247,249);
+}
+main{
+    width: 100%;
+    /*height: 500px;*/
+    background-color: white;
+    margin: 74px auto;
+}
+.group-list{
+    width: 100%;
+}
+.group-item{
+    width: 100%;
+    height: 55px;
+    overflow: hidden;
+    line-height: 55px;
+
+    /*cursor: pointer;*/
+    /*font-weight: lighter;*/
+    /*font-size: 18px;*/
+    /*font-family: '宋体';*/
+}
+
+
+.group-item>h1{
+    display: inline-block;
+    font-weight: normal;
+    font-weight: lighter;
+    font-size: 18px;
+    font-family: '宋体';
+    cursor: pointer;
+}
+
+.group-item:before{
+    content: url("../images/arrow_x_16.png");
+    display: inline-block;
+    margin: auto 8px;
+
+}
+.rotate:before{
+    transform: rotateZ(90deg);
+}
+.friend-list{
+    width: 100%;
+}
+.friend-item{
+    width: 100%;
+    /*height: 100px;*/
+    /*background-color: red;*/
+    /*display: none;*/
+    font-size: 0;
+    /*margin: 5px auto;*/
+
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    position: relative;
+}
+.friend-item .img,.friend-item .info{
+    display: inline-block;
+}
+.friend-item .img{
+    width: 100px;
+    height: 100px;
+    /*height: calc(width);*/
+    /*background-color: palevioletred;*/
+    border-radius: 50%;
+    margin: 10px;
+    background-size: cover !important;
+    background-position: 50% 50% !important;
+}
+.friend-item:first-child .img{
+    background: url("../images/Henrry Lee.JPG");
+
+}
+.friend-item:nth-child(2) .img{
+    background: url("../images/Tim cook.jpeg");
+}
+.friend-item:nth-child(3) .img{
+    background: url("../images/Li Dakang.jpeg");
+}
+.friend-item .info{
+    width: calc(100% - 100px - 20px);
+    /*height: 100px;*/
+    /*background-color: yellow;*/
+    /*border-bottom: 1px solid #d3d3d3;*/
+    /*margin-bottom: 10px;*/
+
+}
+.friend-item:after{
+    content: '';
+    display: inline-block;
+    height: 2px;
+    /*background: blueviolet;*/
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 100px - 20px);
+}
+.friend-item .info .name{
+    /*height: 50%;*/
+    font-size: 30px;
+    /*background-color: fuchsia;*/
+    margin-bottom: 10px;
+    color: red;
+}
+.friend-item .info .des{
+    /*height: 50%;*/
+    font-size: 15px;
+    /*background-color: cyan;*/
+    color: lightgrey;
+
+}
+.active{
+    transform: rotateZ(90deg);
+}

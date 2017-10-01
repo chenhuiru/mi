@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/*默认样式 全屏*/
+
+body {
+    margin: 0; padding: 0;
+}
+html, body {
+    height: 100%;
+
+}
+header, main, footer {
+    margin: 0 auto;
+    width: 1100px;
+}
+header {
+    background: #ff0000;
+    height: 19%;
+}
+footer {
+    background: #0000ff;
+    height: 19%;
+}
+main   {
+    height: 60%;
+    background: #d3d3d3;
+    margin: 1% auto;
+    font-size: 0;
+}
+
+.left,.content,.right{
+    height: 100%;
+    background-color: green;
+    display: inline-block;
+}
+.left,.right{
+    width: 19%;
+}
+.content{
+    width: 60%;
+    margin:0px 1%;
+}
+/*屏幕大于 1100px*/
+@media screen and (max-width: 1100px) and (min-width: 790px){
+    header, main, footer{
+        width: 790px;
+    }
+    .right{
+        display: none;
+    }
+    .left{
+        width: 18%;
+    }
+    .content{
+        width: 80%;
+        margin: 0px 0px 0px 1%;
+    }
+
+}
+@media screen and (max-width: 790px) and (min-width: 375px) {
+    header, main, footer {
+        width: 375px;
+    }
+    .right{
+        display: block;
+    }
+    .left,.content,.right{
+        width: 100%;
+        display: block;
+    }
+    .left{
+        height: 14%;
+    }
+    .right{
+        height: 14%;
+    }
+    .content{
+        height: 70%;
+        margin: 2% auto;
+    }
+}
